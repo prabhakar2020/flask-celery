@@ -1,6 +1,9 @@
 # Flask-celery
 Flask Application with Celery and Redis
 
+### Celery : 
+Celery is an open-source Python library which is used to run the tasks asynchronously. It is a task queue that holds the tasks and distributes them to the workers in a proper manner. It is primarily focused on real-time operation but also supports scheduling (run regular interval tasks). It enhances the end's user activity amazingly. Celery supports the various message brokers such as RabbitMQ and Redis.
+
 ### Steps to run application
 ##### 1. Run application via docker / docker-compose
 * Install [docker](https://docs.docker.com/engine/install/)

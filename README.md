@@ -8,7 +8,7 @@ Flask Application with Celery and Redis
 * `docker-compose build`
 * `docker-compose up`
 
-**Note**: We can specify RABBITMQ credentials and port information on [docker-compose.yml](https://github.com/prabhakar2020/flask-celery/blob/main/docker-compose.yml#L17) file
+**Note**: We can specify RABBITMQ credentials and port information on [docker-compose.yml#L17](https://github.com/prabhakar2020/flask-celery/blob/main/docker-compose.yml#L17) file
 
 ##### 2. Run application via docker / docker-compose
 * Install [python3.8](https://www.python.org/downloads/release/python-380/") 

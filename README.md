@@ -20,5 +20,6 @@ Flask Application with Celery and Redis
 	* We can test celery functionality by hitting this url http://localhost:5000/simple_start_task
 
 ### Reference tutorial
+* Celery + Python - https://www.javatpoint.com/celery-tutorial-using-python
 * Celery - https://docs.celeryq.dev/en/stable/getting-started/first-steps-with-celery.html
 * RabbitMQ - https://www.rabbitmq.com/download.html

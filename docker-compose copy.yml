@@ -1,0 +1,25 @@
+version: "3.7"
+services:
+
+  app:
+    image: 'flask_celery_app:latest'
+    ports:
+      - "5000:5000"
+    depends_on:
+      - rabbit
+  rabbit:
+    hostname: rabbit
+    image: "rabbitmq:3-management"
+    environment:
+      - RABBITMQ_DEFAULT_USER=prabhakar
+      - RABBITMQ_DEFAULT_PASS=password
+    ports:
+      - "15672:15672"
+      - "5672:5672"
+
+  worker:
+    image: 'flask_celery_worker:latest'
+    user: nobody
+    depends_on:
+      - rabbit
+      - app

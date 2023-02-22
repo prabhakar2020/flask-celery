@@ -1,0 +1,28 @@
+version: "3.7"
+services:
+
+  app:
+    build: './app'
+    ports:
+      - "5000:5000"
+    depends_on:
+      - rabbit
+    # volumes: 
+    #   - './Part_2/app:/app'
+
+  rabbit:
+    hostname: rabbit
+    image: "rabbitmq:3-management"
+    environment:
+      - RABBITMQ_DEFAULT_USER=prabhakar
+      - RABBITMQ_DEFAULT_PASS=prabha
+    ports:
+      - "15672:15672"
+      - "5672:5672"
+
+  worker:
+    build: './worker'
+    user: nobody
+    depends_on:
+      - rabbit
+      - app
